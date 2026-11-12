@@ -1,0 +1,73 @@
+/** @type {import('tailwindcss').Config} */
+import forms from '@tailwindcss/forms';
+import containerQueries from '@tailwindcss/container-queries';
+
+export default {
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0E1B2E',
+        'on-primary': '#FFFFFF',
+        secondary: '#475569',
+        'on-secondary': '#FFFFFF',
+        accent: '#C81E2E',
+        'on-accent': '#FFFFFF',
+        'navy-dark': '#080F1A',
+        silver: '#94A3B8',
+        'silver-light': '#E2E8F0',
+        'neutral-bg': '#F8FAFC',
+        surface: '#FFFFFF',
+        'on-surface': '#0F172A',
+        'surface-variant': '#F1F5F9',
+        'on-surface-variant': '#334155',
+        outline: '#CBD5E1',
+        'outline-variant': '#E2E8F0',
+      },
+      borderRadius: {
+        none: '0px',
+        sm: '4px',
+        DEFAULT: '6px',
+        md: '8px',
+        lg: '12px',
+        full: '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        section: '64px',
+        'section-lg': '96px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+        headline: ['"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+        label: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'headline-xl': ['36px', { lineHeight: '44px', letterSpacing: '-0.015em', fontWeight: '700' }],
+        'headline-xl-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', fontWeight: '600' }],
+        'headline-lg-mobile': ['24px', { lineHeight: '32px', fontWeight: '600' }],
+        'headline-md': ['22px', { lineHeight: '30px', fontWeight: '600' }],
+        'headline-sm': ['18px', { lineHeight: '26px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '24px', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '20px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.02em', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.04em', fontWeight: '600' }],
+      },
+      transitionDuration: { 'state-change': '150ms', 'surface-enter': '200ms' },
+      transitionDelay: { 'state-change': '0ms', 'surface-enter': '0ms' },
+      transitionTimingFunction: { 'state-change': 'ease-in-out', 'surface-enter': 'ease-out' },
+    },
+  },
+  plugins: [forms, containerQueries],
+};
